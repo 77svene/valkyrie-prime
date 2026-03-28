@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValkyriePrime | NFT-Collateralized Credit</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">VALKYRIE<span>PRIME</span></div>
+        <div class="nav-links">
+            <button id="connectBtn" class="btn-primary">Connect Wallet</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <label>Total Borrowed</label>
+                    <div id="totalBorrowed" class="value">$0.00</div>
+                </div>
+                <div class="stat-card">
+                    <label>Credit Capacity</label>
+                    <div id="creditCapacity" class="value">$0.00</div>
+                </div>
+                <div class="stat-card">
+                    <label>Health Factor</label>
+                    <div id="healthFactor" class="value">0.00</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-grid">
+            <div class="panel nft-vault">
+                <h3>Asset Vault</h3>
+                <p class="subtitle">Deposit NFTs to unlock Credit-Shards</p>
+                <div id="nftGallery" class="nft-grid">
+                    <!-- NFTs loaded via app.js -->
+                    <div class="empty-state">Connect wallet to view eligible NFTs</div>
+                </div>
+            </div>
+
+            <div class="panel credit-engine">
+                <h3>Credit Engine</h3>
+                <div class="viz-container">
+                    <div class="viz-label">Debt-to-Equity Ratio</div>
+                    <div class="health-bar">
+                        <div id="healthFill" class="health-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="viz-markers">
+                        <span>0%</span>
+                        <span>50%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+
+                <div class="action-box">
+                    <div class="input-group">
+                        <label>Borrow USDC</label>
+                        <input type="number" id="borrowAmount" placeholder="0.00">
+                    </div>
+                    <button id="borrowBtn" class="btn-action" disabled>Execute Borrow</button>
+                </div>
+
+                <div class="yield-info">
+                    <label>Current Yield (Uniswap V3 LP)</label>
+                    <span id="currentYield" class="yield-value">0.00% APY</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel active-shards">
+            <h3>Your Credit-Shards (ERC-1155)</h3>
+            <table class="shard-table">
+                <thead>
+                    <tr>
+                        <th>Shard ID</th>
+                        <th>Collection</th>
+                        <th>Balance</th>
+                        <th>Floor Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="shardList">
+                    <!-- Shards loaded via app.js -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
