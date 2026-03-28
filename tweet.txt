@@ -1,0 +1,7 @@
+Just shipped ValkyriePrime — The Fractionalized NFT-Collateralized Credit Protocol for ETHGlobal HackMoney 2026 | Uniswap & Circle tracks!
+
+Unlocks liquidity for high-value NFT collections by combining ERC-1155 fractionalization with an automated credit line backed by Uniswap V3 LP positions.
+
+https://github.com/77svene/valkyrie-prime
+
+#hackathon #AI #Web3 #DeFi @lablabai

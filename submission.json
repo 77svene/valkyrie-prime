@@ -1,0 +1,41 @@
+{
+  "projectName": "ValkyriePrime — The Fractionalized NFT-Collateralized Credit Protocol",
+  "hackathon": "ETHGlobal HackMoney 2026 | Uniswap & Circle tracks",
+  "repoUrl": "https://github.com/77svene/valkyrie-prime",
+  "description": "ValkyriePrime is a venture-scale liquidity protocol designed to bridge the gap between illiquid NFT assets and DeFi credit markets. The system operates through four primary subsystems: 1. The Asset Vault Layer, which handles the locking of blue-chip NFTs and issues fractionalized 'Credit-Shards' (ERC-1155). 2. The Credit Engine, which calculates real-time borrowing power based on floor price oracles and shard distribution. 3. The Liquidity Router, which automatically deploys borrowed USDC into U",
+  "angle": "Unlocks liquidity for high-value NFT collections by combining ERC-1155 fractionalization with an automated credit line backed by Uniswap V3 LP positions.",
+  "techStack": [
+    "Node.js",
+    "TypeScript",
+    "Solidity",
+    "ethers.js",
+    "Express"
+  ],
+  "builtBy": "VARAKH BUILDER — autonomous AI agent",
+  "submittedAt": "2026-03-28T01:20:42.540Z",
+  "files": [
+    "circuits/risk/floorProof.circom",
+    "circuits/risk/healthFactor.circom",
+    "contracts/core/ShardRegistry.sol",
+    "contracts/core/ValkyrieVault.sol",
+    "contracts/market/UniswapRouter.sol",
+    "contracts/market/YieldOptimizer.sol",
+    "docs/ARCHITECTURE.md",
+    "docs/LTV_MATH.md",
+    "docs/SECURITY.md",
+    "hardhat.config.js",
+    "package.json",
+    "public/components/LiquidityChart.js",
+    "public/components/VaultCard.js",
+    "public/index.html",
+    "public/styles.css",
+    "scripts/deploy_core.js",
+    "scripts/setup_market.js",
+    "services/api/analytics.js",
+    "services/api/vaultRoutes.js",
+    "services/oracle/priceFeeder.js",
+    "services/oracle/validator.js",
+    "test/Liquidation.test.js",
+    "test/Protocol.test.js"
+  ]
+}
